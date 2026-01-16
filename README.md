@@ -29,17 +29,3 @@ Make sure you have:
 
 2. Install Dependencies
    npm install
-
-First-React-Native/
-├── app/                    # Main app directory
-│   ├── _layout.js         # Root layout
-│   ├── index.js           # Home screen
-│   ├── profile.js         # Profile screen
-│   └── settings.js        # Settings screen
-├── assets/                # Images, fonts, icons
-├── components/            # Reusable UI components
-├── constants/             # Colors, styles, config
-├── utils/                 # Helper functions
-├── App.js                 # Main entry point
-└── package.json           # Project configuration
-
