@@ -1,12 +1,23 @@
-import { StyleSheet, Button, Image, Pressable, Text, TouchableOpacity, View} from "react-native";
+import { StyleSheet, Button, Image, Pressable, Text, TouchableOpacity, View, useColorScheme} from "react-native";
 
 export default function Index() {
+    const theme = useColorScheme();
+    const isDark = theme === "dark";
+
+    const backgroundColor = isDark ? 'black' : "white";
+    const textColor = isDark ? 'white' : 'black';
   return (
     <View
-        style={styles.view}
+        style={[
+            styles.view,
+            {backgroundColor: backgroundColor}
+        ]}
     >
       <Text 
-        style={styles.text}
+        style={[
+            styles.text,
+            {color: textColor}
+        ]}
       >Hello World from First React-Native with Expo</Text>
 
       <Image 
@@ -18,7 +29,7 @@ export default function Index() {
     >
       <Text
       style={styles.btnText}
-      >Press me for Query:- --</Text>
+      >Press me for Query.....</Text>
     </Pressable>
 
     </View>
@@ -30,7 +41,6 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         width: '100%',
-        backgroundColor: 'yellow',
         gap: 10,
     },
 
@@ -57,7 +67,6 @@ const styles = StyleSheet.create({
         fontSize:20,
         fontWeight: "bold",
     },
-
 })
 
 
